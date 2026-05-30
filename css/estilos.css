@@ -1,0 +1,208 @@
+/* ==========================================================================
+   ESTILOS PERSONALIZADOS - ESTUDIO BRUNO BADINO Y ASOCIADOS
+   ========================================================================== */
+
+/* Variables de Color globales basadas en el Logotipo */
+:root {
+    --color-primario-azul: #193264;    /* Azul Marino Corporativo (Confianza y Leyes) */
+    --color-secundario-gris: #969BA1;  /* Gris Cemento (Equilibrio y Alianza) */
+    --color-fondo-claro: #F8F9FA;      /* Gris ultra claro para fondos limpios */
+    --color-oscuro-texto: #2B303A;     /* Color oscuro suave para textos legibles */
+}
+
+/* --- Estilos Generales --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-oscuro-texto);
+    background-color: #FFFFFF;
+    line-height: 1.6;
+}
+
+/* Tipografía Corporativa */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-primario-azul);
+    font-weight: 700;
+}
+
+/* Subrayado decorativo profesional para títulos (opcional en secciones) */
+.titulo-linea {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+.titulo-linea::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-primario-azul);
+    border-radius: 2px;
+}
+
+/* Centrado para textos descriptivos */
+.titulo-linea-centro::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* ==========================================================================
+   COMPONENTES DE NAVBAR (MENÚ RESPONSIVO)
+   ========================================================================== */
+.navbar {
+    background-color: #FFFFFF !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+/* Logo tamaño responsivo */
+.navbar-brand img {
+    max-height: 55px; /* Evita que el logo rompa la barra */
+    width: auto;
+}
+
+/* Enlaces del menú */
+.navbar-nav .nav-link {
+    color: var(--color-oscuro-texto) !important;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 8px 16px !important;
+    transition: color 0.2s ease;
+}
+
+/* Efecto Hover (pasar el mouse) y Active (pestaña actual) */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--color-primario-azul) !important;
+}
+
+/* Ajuste del botón menú hamburguesa en celulares */
+.navbar-toggler {
+    border-color: transparent;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+
+/* ==========================================================================
+   SECCIÓN HERO / PORTADA PRINCIPAL (INDEX)
+   ========================================================================== */
+.hero-section {
+    background: linear-gradient(135deg, rgba(25, 50, 100, 0.04) 0%, rgba(150, 155, 161, 0.04) 100%);
+    padding: 100px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+
+/* ==========================================================================
+   TARJETAS DE SERVICIOS (CONTABILIDAD, IMPUESTOS, SUELDOS)
+   ========================================================================== */
+.tarjeta-servicio {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    padding: 35px 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto visual responsivo al pasar el mouse por arriba de un servicio */
+.tarjeta-servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(25, 50, 100, 0.08);
+    border-color: rgba(25, 50, 100, 0.15);
+}
+
+/* Íconos dentro de las tarjetas */
+.tarjeta-servicio .icono-contenedor {
+    color: var(--color-secundario-gris);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+.tarjeta-servicio:hover .icono-contenedor {
+    color: var(--color-primario-azul);
+}
+
+
+/* ==========================================================================
+   BOTONES PERSONALIZADOS (EXTENSIÓN DE BOOTSTRAP)
+   ========================================================================== */
+/* Botón Primario (Azul Marino) */
+.btn-estudio-primary {
+    background-color: var(--color-primario-azul);
+    border-color: var(--color-primario-azul);
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+.btn-estudio-primary:hover, 
+.btn-estudio-primary:focus {
+    background-color: #112347; /* Un tono más oscuro para el click */
+    border-color: #112347;
+    color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(25, 50, 100, 0.25);
+}
+
+/* Botón Secundario (Gris Grafito) */
+.btn-estudio-secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-secundario-gris);
+    color: var(--color-oscuro-texto);
+    font-weight: 600;
+    padding: 8px 22px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+.btn-estudio-secondary:hover {
+    background-color: var(--color-secundario-gris);
+    color: #FFFFFF;
+}
+
+
+/* ==========================================================================
+   SECCIONES CON FONDO ALTERNATIVO
+   ========================================================================== */
+.bg-estudio-claro {
+    background-color: var(--color-fondo-claro) !important;
+}
+
+
+/* ==========================================================================
+   PIE DE PÁGINA (FOOTER CORPORATIVO)
+   ========================================================================== */
+.footer-estudio {
+    background-color: #161C27; /* Un fondo gris casi negro ultra elegante */
+    color: #A5ACBA;
+    padding: 60px 0 20px 0;
+    font-size: 14px;
+}
+
+.footer-estudio h5 {
+    color: #FFFFFF;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.footer-estudio a {
+    color: #A5ACBA;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.footer-estudio a:hover {
+    color: #FFFFFF;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+    margin-top: 40px;
+}
