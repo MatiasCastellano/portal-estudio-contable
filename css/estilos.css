@@ -1,16 +1,21 @@
 /* ==========================================================================
-   ESTILOS PERSONALIZADOS - ESTUDIO BRUNO BADINO Y ASOCIADOS
+   HOJA DE ESTILOS UNIFICADA - BRUNO BADINO Y ASOCIADOS
    ========================================================================== */
 
-/* Variables de Color globales basadas en el Logotipo */
+/* Variables de Color Extraídas Directamente del Isotipo Comercial */
 :root {
-    --color-primario-azul: #193264;    /* Azul Marino Corporativo (Confianza y Leyes) */
-    --color-secundario-gris: #969BA1;  /* Gris Cemento (Equilibrio y Alianza) */
-    --color-fondo-claro: #F8F9FA;      /* Gris ultra claro para fondos limpios */
-    --color-oscuro-texto: #2B303A;     /* Color oscuro suave para textos legibles */
+    --color-primario-azul: #193264;    /* Azul Marino de la primera 'B' y textos */
+    --color-secundario-gris: #969BA1;  /* Gris Cemento de la alianza/apretón de manos */
+    --color-fondo-claro: #F8F9FA;      /* Gris neutral muy suave para balance de lectura */
+    --color-oscuro-texto: #2B303A;     /* Grafito oscuro para textos legibles */
 }
 
-/* --- Estilos Generales --- */
+/* --- Comportamiento Global del Portal --- */
+html {
+    scroll-behavior: smooth; /* Hace que el deslizamiento sea didáctico y fluido */
+    scroll-padding-top: 85px; /* Evita que la barra fija tape los títulos al deslizarse */
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--color-oscuro-texto);
@@ -18,13 +23,12 @@ body {
     line-height: 1.6;
 }
 
-/* Tipografía Corporativa */
+/* Títulos con el color institucional */
 h1, h2, h3, h4, h5, h6 {
     color: var(--color-primario-azul);
-    font-weight: 700;
 }
 
-/* Subrayado decorativo profesional para títulos (opcional en secciones) */
+/* --- Decoración Profesional para Títulos --- */
 .titulo-linea {
     position: relative;
     padding-bottom: 15px;
@@ -40,169 +44,120 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--color-primario-azul);
     border-radius: 2px;
 }
-
-/* Centrado para textos descriptivos */
 .titulo-linea-centro::after {
     left: 50%;
     transform: translateX(-50%);
 }
 
-
 /* ==========================================================================
-   COMPONENTES DE NAVBAR (MENÚ RESPONSIVO)
+   COMPONENTES VISUALES COMPLEMENTARIOS
    ========================================================================== */
-.navbar {
-    background-color: #FFFFFF !important;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-    padding: 15px 0;
-    transition: all 0.3s ease;
+
+/* Barra de Contacto Superior (Estilo Competencia) */
+.top-bar {
+    background-color: #161C27; /* Gris corporativo ultra oscuro */
+    font-size: 13px;
+    letter-spacing: 0.5px;
 }
 
-/* Logo tamaño responsivo */
+/* Barra de Navegación */
+.navbar {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    padding: 12px 0;
+}
+
+/* Ajuste Responsivo del Isotipo */
 .navbar-brand img {
-    max-height: 55px; /* Evita que el logo rompa la barra */
+    max-height: 48px; /* Controla la escala para que no rompa la barra */
     width: auto;
 }
 
-/* Enlaces del menú */
+/* Enlaces del Menú en Computadoras */
 .navbar-nav .nav-link {
     color: var(--color-oscuro-texto) !important;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     padding: 8px 16px !important;
     transition: color 0.2s ease;
 }
 
-/* Efecto Hover (pasar el mouse) y Active (pestaña actual) */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
     color: var(--color-primario-azul) !important;
 }
 
-/* Ajuste del botón menú hamburguesa en celulares */
-.navbar-toggler {
-    border-color: transparent;
-}
-.navbar-toggler:focus {
-    box-shadow: none;
-}
-
-
 /* ==========================================================================
-   SECCIÓN HERO / PORTADA PRINCIPAL (INDEX)
+   CAPA HERO: IMPACTO COMPLETO DE FONDO OSCURO
+   ========================================================================== */
+/* ==========================================================================
+   NUEVO HERO EQUILIBRADO: TEXTO IZQUIERDA + IMAGEN DERECHA
+   ========================================================================== */
+/* ==========================================================================
+   NUEVO HERO EQUILIBRADO: LUMINOSO Y DE ALTA LEGIBILIDAD
    ========================================================================== */
 .hero-section {
-    background: linear-gradient(135deg, rgba(25, 50, 100, 0.04) 0%, rgba(150, 155, 161, 0.04) 100%);
-    padding: 100px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    background: linear-gradient(135deg, rgba(25, 50, 100, 0.02) 0%, rgba(150, 155, 161, 0.05) 100%);
+    padding: 80px 0;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
 }
 
+/* Forzamos el color azul de tu cliente en el título principal */
+.hero-titulo-marca {
+    color: var(--color-primario-azul) !important;
+    font-size: 3.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+/* El subtítulo superior en el gris grafito del logo */
+.hero-subtitulo-marca {
+    color: var(--color-secundario-gris) !important;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+/* Estilo para el "Y Asociados" en un tono oscuro intermedio */
+.style-asociados {
+    color: #4A5568 !important;
+    letter-spacing: 2px;
+}
+
+/* Imagen del estudio en la derecha */
+.hero-imagen-estudio {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(25, 50, 100, 0.1);
+    background-color: #E2E8F0; /* Fondo gris temporal por si la foto no carga todavía */
+}
 
 /* ==========================================================================
-   TARJETAS DE SERVICIOS (CONTABILIDAD, IMPUESTOS, SUELDOS)
+   BOTÓN EXCLUSIVO DEL ESTUDIO
    ========================================================================== */
-.tarjeta-servicio {
-    background-color: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    border-radius: 8px;
-    padding: 35px 25px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Efecto visual responsivo al pasar el mouse por arriba de un servicio */
-.tarjeta-servicio:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(25, 50, 100, 0.08);
-    border-color: rgba(25, 50, 100, 0.15);
-}
-
-/* Íconos dentro de las tarjetas */
-.tarjeta-servicio .icono-contenedor {
-    color: var(--color-secundario-gris);
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    transition: color 0.3s ease;
-}
-.tarjeta-servicio:hover .icono-contenedor {
-    color: var(--color-primario-azul);
-}
-
-
-/* ==========================================================================
-   BOTONES PERSONALIZADOS (EXTENSIÓN DE BOOTSTRAP)
-   ========================================================================== */
-/* Botón Primario (Azul Marino) */
 .btn-estudio-primary {
     background-color: var(--color-primario-azul);
     border-color: var(--color-primario-azul);
     color: #FFFFFF;
     font-weight: 600;
-    padding: 10px 24px;
     border-radius: 4px;
     transition: all 0.2s ease;
 }
-.btn-estudio-primary:hover, 
-.btn-estudio-primary:focus {
-    background-color: #112347; /* Un tono más oscuro para el click */
-    border-color: #112347;
+.btn-estudio-primary:hover {
+    background-color: #112244; /* Azul sutilmente más intenso al presionar */
+    border-color: #112244;
     color: #FFFFFF;
-    box-shadow: 0 4px 12px rgba(25, 50, 100, 0.25);
+    box-shadow: 0 4px 15px rgba(25, 50, 100, 0.35);
 }
 
-/* Botón Secundario (Gris Grafito) */
-.btn-estudio-secondary {
-    background-color: transparent;
-    border: 2px solid var(--color-secundario-gris);
-    color: var(--color-oscuro-texto);
-    font-weight: 600;
-    padding: 8px 22px;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-}
-.btn-estudio-secondary:hover {
-    background-color: var(--color-secundario-gris);
-    color: #FFFFFF;
-}
-
-
-/* ==========================================================================
-   SECCIONES CON FONDO ALTERNATIVO
-   ========================================================================== */
+/* Clases de utilidad para fondos */
 .bg-estudio-claro {
     background-color: var(--color-fondo-claro) !important;
-}
-
-
-/* ==========================================================================
-   PIE DE PÁGINA (FOOTER CORPORATIVO)
-   ========================================================================== */
-.footer-estudio {
-    background-color: #161C27; /* Un fondo gris casi negro ultra elegante */
-    color: #A5ACBA;
-    padding: 60px 0 20px 0;
-    font-size: 14px;
-}
-
-.footer-estudio h5 {
-    color: #FFFFFF;
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 25px;
-}
-
-.footer-estudio a {
-    color: #A5ACBA;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-.footer-estudio a:hover {
-    color: #FFFFFF;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 20px;
-    margin-top: 40px;
 }
