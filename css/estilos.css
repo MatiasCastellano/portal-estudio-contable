@@ -1,31 +1,37 @@
 /* ==========================================================================
-   HOJA DE ESTILOS UNIFICADA - BRUNO BADINO Y ASOCIADOS
+   HOJA DE ESTILOS GLOBAL - BRUNO BADINO Y ASOCIADOS
    ========================================================================== */
 
 /* Variables de Color Extraídas Directamente del Isotipo Comercial */
 :root {
-    --color-primario-azul: #193264;    /* Azul Marino de la primera 'B' y textos */
-    --color-secundario-gris: #969BA1;  /* Gris Cemento de la alianza/apretón de manos */
-    --color-fondo-claro: #F8F9FA;      /* Gris neutral muy suave para balance de lectura */
+    --color-primario-azul: #193264;    /* Azul Marino corporativo */
+    --color-secundario-gris: #969BA1;  /* Gris Cemento corporativo */
+    --color-fondo-claro: #F8F9FA;      /* Gris neutral suave */
     --color-oscuro-texto: #2B303A;     /* Grafito oscuro para textos legibles */
 }
 
 /* --- Comportamiento Global del Portal --- */
 html {
-    scroll-behavior: smooth; /* Hace que el deslizamiento sea didáctico y fluido */
-    scroll-padding-top: 85px; /* Evita que la barra fija tape los títulos al deslizarse */
+    scroll-behavior: smooth; 
+    scroll-padding-top: 85px; 
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--color-oscuro-texto);
-    background-color: #FFFFFF;
     line-height: 1.6;
+    
+   
+    background-color: #ffffff;
+    background-image: radial-gradient(var(--color-secundario-gris) 0.5px, #ffffff 0.5px);
+    background-size: 20px 20px;
+
 }
 
 /* Títulos con el color institucional */
 h1, h2, h3, h4, h5, h6 {
     color: var(--color-primario-azul);
+    font-weight: 700;
 }
 
 /* --- Decoración Profesional para Títulos --- */
@@ -50,26 +56,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   COMPONENTES VISUALES COMPLEMENTARIOS
+   COMPONENTES VISUALES COMPLEMENTARIOS (NAVBAR & FOOTER)
    ========================================================================== */
-
-/* Barra de Contacto Superior (Estilo Competencia) */
-.top-bar {
-    background-color: #161C27; /* Gris corporativo ultra oscuro */
-    font-size: 13px;
-    letter-spacing: 0.5px;
-}
 
 /* Barra de Navegación */
 .navbar {
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-    padding: 12px 0;
+    box-shadow: 0 4px 20px rgba(25, 50, 100, 0.04);
+    padding: 14px 0;
+    background-color: rgba(255, 255, 255, 0.96) !important;
+    backdrop-filter: blur(5px); /* Efecto esmerilado moderno en navegadores compatibles */
 }
 
 /* Ajuste Responsivo del Isotipo */
 .navbar-brand img {
-    max-height: 48px; /* Controla la escala para que no rompa la barra */
+    max-height: 46px;
     width: auto;
+    transition: transform 0.3s ease;
+}
+.navbar-brand img:hover {
+    transform: scale(1.03);
 }
 
 /* Enlaces del Menú en Computadoras */
@@ -79,8 +84,27 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 8px 16px !important;
-    transition: color 0.2s ease;
+    padding: 8px 0 !important;
+    margin: 0 14px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* ✨ EFECTO INTERACTIVO: Subrayado animado de alta gama para el menú */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-primario-azul);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
 }
 
 .navbar-nav .nav-link:hover,
@@ -88,25 +112,16 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-primario-azul) !important;
 }
 
-/* ==========================================================================
-   CAPA HERO: IMPACTO COMPLETO DE FONDO OSCURO
-   ========================================================================== */
-/* ==========================================================================
-   NUEVO HERO EQUILIBRADO: TEXTO IZQUIERDA + IMAGEN DERECHA
-   ========================================================================== */
-/* ==========================================================================
-   NUEVO HERO EQUILIBRADO: LUMINOSO Y DE ALTA LEGIBILIDAD
-   ========================================================================== */
+
 .hero-section {
-    background: linear-gradient(135deg, rgba(25, 50, 100, 0.02) 0%, rgba(150, 155, 161, 0.05) 100%);
-    padding: 80px 0;
+    background: linear-gradient(135deg, rgba(25, 50, 100, 0.03) 0%, rgba(255, 255, 255, 0.9) 60%, rgba(150, 155, 161, 0.06) 100%);
+    padding: 90px 0;
     min-height: 75vh;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid rgba(0,0,0,0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.02);
 }
 
-/* Forzamos el color azul de tu cliente en el título principal */
 .hero-titulo-marca {
     color: var(--color-primario-azul) !important;
     font-size: 3.8rem;
@@ -115,7 +130,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
 }
 
-/* El subtítulo superior en el gris grafito del logo */
 .hero-subtitulo-marca {
     color: var(--color-secundario-gris) !important;
     font-size: 1rem;
@@ -123,51 +137,44 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-/* Estilo para el "Y Asociados" en un tono oscuro intermedio */
 .style-asociados {
     color: #4A5568 !important;
     letter-spacing: 2px;
 }
 
-/* Imagen del estudio en la derecha */
 .hero-imagen-estudio {
     width: 100%;
     max-height: 450px;
     object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 15px 35px rgba(25, 50, 100, 0.1);
-    background-color: #E2E8F0; /* Fondo gris temporal por si la foto no carga todavía */
+    border-radius: 16px; /* Esquinas un toque más curvas y premium */
+    box-shadow: 0 20px 40px rgba(25, 50, 100, 0.12);
 }
 
-/* ==========================================================================
-   BOTÓN EXCLUSIVO DEL ESTUDIO
-   ========================================================================== */
+
 .btn-estudio-primary {
     background-color: var(--color-primario-azul);
     border-color: var(--color-primario-azul);
     color: #FFFFFF;
     font-weight: 600;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-}
-.btn-estudio-primary:hover {
-    background-color: #112244; /* Azul sutilmente más intenso al presionar */
-    border-color: #112244;
-    color: #FFFFFF;
-    box-shadow: 0 4px 15px rgba(25, 50, 100, 0.35);
+    border-radius: 6px;
+    padding: 12px 28px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Clases de utilidad para fondos */
+.btn-estudio-primary:hover {
+    background-color: #112244;
+    border-color: #112244;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(25, 50, 100, 0.25);
+}
+
 .bg-estudio-claro {
     background-color: var(--color-fondo-claro) !important;
 }
 
-.hero-section {
-    /* Degradado premium sutil: va desde un destello del azul del estudio a un gris claro suave */
-    background: linear-gradient(135deg, rgba(25, 50, 100, 0.03) 0%, rgba(255, 255, 255, 1) 50%, rgba(150, 155, 161, 0.05) 100%);
-    padding: 100px 0;
-    min-height: 75vh;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+.footer-estudio {
+    background-color: #1A1E24;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 50px 0 20px;
 }

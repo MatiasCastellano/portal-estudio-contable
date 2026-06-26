@@ -1,0 +1,42 @@
+/* ==========================================================================
+   ESTILOS EXCLUSIVOS PARA LA SECCIÓN DE VENCIMIENTOS
+   ========================================================================== */
+
+/* Contenedor blanco que enmarca el cronograma */
+.vencimientos-marco {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(25, 50, 100, 0.08);
+    box-shadow: 0 10px 30px rgba(25, 50, 100, 0.03);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* ✨ EFECTO INTERACTIVO: El documento flota sutilmente al pasar el cursor */
+.vencimientos-marco:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(25, 50, 100, 0.08);
+    border-color: rgba(25, 50, 100, 0.15);
+}
+
+/* Estilizado directo de la imagen del calendario */
+.vencimientos-imagen {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+    
+    /* 
+       Evita que la imagen se agrande infinitamente en monitores gigantes, 
+       manteniendo los números legibles y nítidos.
+    */
+    max-width: 950px; 
+    margin: 0 auto;
+}
+
+/* Pequeño toque premium: un sutil brillo de fondo para resaltar el marco */
+#vencimientos {
+    background: radial-gradient(circle at top, rgba(25, 50, 100, 0.01) 0%, transparent 70%);
+    position: relative;
+}

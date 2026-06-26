@@ -1,0 +1,56 @@
+/* ==========================================================================
+   ESTILOS EXCLUSIVOS PARA LAS TARJETAS DE SERVICIOS
+   ========================================================================== */
+
+.tarjeta-servicio {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 20px rgba(25, 50, 100, 0.02);
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto novedoso al pasar el mouse por encima (Se eleva sutilmente y pinta el borde inferior) */
+.tarjeta-servicio:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(25, 50, 100, 0.08);
+    border-bottom: 3px solid var(--color-primario-azul);
+}
+
+/* El contenedor del logo representativo */
+.icono-contenedor {
+    width: 55px;
+    height: 55px;
+    background-color: rgba(25, 50, 100, 0.05); /* Fondo muy suave con el azul institucional */
+    color: var(--color-primario-azul); /* Icono azul */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+}
+
+/* Al pasar el mouse por la tarjeta, el icono se pinta con los colores del logo completo */
+.tarjeta-servicio:hover .icono-contenedor {
+    background-color: var(--color-primario-azul);
+    color: #ffffff;
+}
+
+.tarjeta-servicio h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--color-primario-azul);
+}
+
+.tarjeta-servicio p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
