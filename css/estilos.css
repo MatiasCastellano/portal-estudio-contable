@@ -161,3 +161,13 @@ h1, h2, h3, h4, h5, h6 {
 .bg-estudio-claro {
     background-color: var(--color-fondo-claro) !important;
 }
+
+.hero-section {
+    /* Degradado premium sutil: va desde un destello del azul del estudio a un gris claro suave */
+    background: linear-gradient(135deg, rgba(25, 50, 100, 0.03) 0%, rgba(255, 255, 255, 1) 50%, rgba(150, 155, 161, 0.05) 100%);
+    padding: 100px 0;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+}
