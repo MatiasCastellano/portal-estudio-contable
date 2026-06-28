@@ -1,0 +1,86 @@
+/* ==========================================================================
+   ESTILOS EXCLUSIVOS PARA LA PÁGINA DE CONTACTO
+   ========================================================================== */
+
+/* Contenedor neutral de datos */
+.canales-contenedor {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mini-icono {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--color-primario-azul);
+}
+
+.text-xs {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+/* Base común para botones premium de contacto */
+.btn-contacto {
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.btn-contacto:hover {
+    transform: translateY(-2px);
+}
+
+/* Estilo de Marca: WhatsApp */
+.btn-whatsapp {
+    background-color: #25D366;
+    color: #ffffff !important;
+}
+.btn-whatsapp:hover {
+    background-color: #1ebd54;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+}
+
+/* Estilo de Marca: Instagram (Gradiente oficial plano elegante) */
+.btn-instagram {
+    background: linear-gradient(45deg, #F09433 0%, #E6683C 25%, #DC2743 50%, #CC2366 75%, #BC1888 100%);
+    color: #ffffff !important;
+}
+.btn-instagram:hover {
+    opacity: 0.95;
+    box-shadow: 0 6px 20px rgba(220, 39, 67, 0.3);
+}
+
+/* Marco estructural para el Mapa */
+.mapa-marco {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    height: 450px; /* Altura idéntica para hacer juego visual con la columna izquierda */
+    overflow: hidden;
+}
+
+/* Forzar al mapa a ser 100% interactivo y responsivo */
+.mapa-google {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 12px;
+}
+
+.text-primary-custom {
+    color: var(--color-primario-azul);
+}
+.letter-spacing-1 {
+    letter-spacing: 1px;
+}
