@@ -78,3 +78,29 @@ blockquote::after {
     color: var(--color-secundario-gris);
     opacity: 0.6;
 }
+.badge-rol {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Color para Bruno y Pablo (Socio) */
+.badge-rol.socio {
+    background-color: rgba(25, 50, 100, 0.08);
+    color: var(--color-primario-azul);
+    border: 1px solid rgba(25, 50, 100, 0.15);
+}
+
+/* Color para Carolina (Colaborador) */
+.badge-rol.colaborador {
+    background-color: #f1f3f5;
+    color: #495057;
+    border: 1px solid #dee2e6;
+}

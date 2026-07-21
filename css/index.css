@@ -1,9 +1,96 @@
-.hero-section {
-    /* Degradado premium sutil: va desde un destello del azul del estudio a un gris claro suave */
-    background: linear-gradient(135deg, rgba(25, 50, 100, 0.03) 0%, rgba(255, 255, 255, 1) 50%, rgba(150, 155, 161, 0.05) 100%);
-    padding: 100px 0;
-    min-height: 75vh;
-    display: flex;
+/* ==========================================================================
+   ESTILOS EXCLUSIVOS PARA LA PORTADA (INDEX.HTML)
+   ========================================================================== */
+
+/* Título de Impacto Comercial */
+.hero-titulo-principal {
+    color: var(--color-primario-azul);
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.texto-resaltado {
+    color: #2a4b8c; /* Un azul sutilmente más eléctrico para dar contraste */
+    position: relative;
+    display: inline-block;
+}
+
+/* Pequeña etiqueta superior de confianza */
+.badge-estudio {
+    display: inline-flex;
     align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+    background-color: rgba(25, 50, 100, 0.06);
+    color: var(--color-primario-azul);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.style-subtitulo {
+    color: #4A5568 !important;
+    line-height: 1.4;
+}
+
+.description-text {
+    font-size: 1.05rem !important;
+    line-height: 1.65;
+}
+
+/* ✨ NUEVO ENMARCADO PREMIUM PARA LA FOTO */
+.hero-imagen-marco {
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(25, 50, 100, 0.08);
+    box-shadow: 0 20px 50px rgba(25, 50, 100, 0.1);
+    transition: all 0.5s ease;
+}
+
+.hero-imagen-marco:hover {
+    transform: scale(1.01) translateY(-4px);
+    box-shadow: 0 30px 60px rgba(25, 50, 100, 0.15);
+}
+
+.hero-imagen-estudio-nueva {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px; /* Redondeado interno que hace juego con el marco */
+}
+
+/* Botón secundario estilizado */
+.btn-outline-estudio {
+    color: var(--color-primario-azul);
+    border: 2px solid rgba(25, 50, 100, 0.2);
+    font-weight: 600;
+    padding: 11px 24px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-estudio:hover {
+    background-color: rgba(25, 50, 100, 0.04);
+    border-color: var(--color-primario-azul);
+    color: var(--color-primario-azul);
+}
+
+/* Animación sutil de entrada al cargar la página */
+.animate-fade-in {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

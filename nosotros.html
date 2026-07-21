@@ -52,16 +52,12 @@
             <div class="row g-5 justify-content-center">
                 
                 <!-- Tarjeta 1: Bruno Badino -->
-                <div class="col-md-6 col-lg-5">
-                    <div class="tarjeta-equipo h-100">
-                        <div class="imagen-equipo-contenedor">
-                            <!-- 
-                               UBICACIÓN DE LA IMAGEN:
-                               Guarda tu archivo como assets/img/bruno.jpg (todo en minúsculas)
-                               La clase 'rounded-circle' le da la forma redonda profesional.
-                            -->
-                            <img src="assets/img/bruno.jpg" class="img-fluid rounded-circle shadow" alt="Contador Bruno Badino">
-                        </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="tarjeta-equipo h-100 position-relative">
+                    <span class="badge-rol socio">Socio</span>
+                    <div class="imagen-equipo-contenedor">
+                        <img src="assets/img/bruno.jpg" class="img-fluid rounded-circle shadow" alt="Contador Bruno Badino">
+                    </div>
                         <div class="p-4 text-start">
                             <h3 class="h5 fw-bold text-dark mb-1">Bruno Badino</h3>
                             <p class="small text-secondary-custom fw-semibold mb-3">
@@ -77,15 +73,12 @@
                 </div>
                 
                 <!-- Tarjeta 2: Pablo Badino -->
-                <div class="col-md-6 col-lg-5">
-                    <div class="tarjeta-equipo h-100">
-                        <div class="imagen-equipo-contenedor">
-                            <!-- 
-                               UBICACIÓN DE LA IMAGEN:
-                               Guarda tu archivo como assets/img/pablo.jpg (todo en minúsculas)
-                            -->
-                            <img src="assets/img/pablo.jpg" class="img-fluid rounded-circle shadow" alt="Contador Pablo Badino">
-                        </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="tarjeta-equipo h-100 position-relative">
+                    <span class="badge-rol socio">Socio</span>
+                    <div class="imagen-equipo-contenedor">
+                        <img src="assets/img/pablo.jpg" class="img-fluid rounded-circle shadow" alt="Contador Pablo Badino">
+                    </div>
                         <div class="p-4 text-start">
                             <h3 class="h5 fw-bold text-dark mb-1">Pablo Badino</h3>
                             <p class="small text-secondary-custom fw-semibold mb-3">
@@ -99,6 +92,34 @@
                     </div>
                 </div>
 
+                <!-- Tarjeta 3: Carolina Airaudo -->
+            <div class="col-md-6 col-lg-4">
+                <div class="tarjeta-equipo h-100 position-relative">
+                    <!-- CARTEL DE COLABORADOR -->
+                    <span class="badge-rol colaborador">Colaborador</span>
+                    
+                    <div class="imagen-equipo-contenedor">
+                        <img src="assets/img/carolina.jpg" class="img-fluid rounded-circle shadow" alt="Lic. Carolina Airaudo">
+                    </div>
+                    <div class="p-4 text-start">
+                        <h3 class="h5 fw-bold text-dark mb-1">Carolina Airaudo</h3>
+                        <p class="small text-secondary-custom fw-semibold mb-3">
+                            <i class="bi bi-person-badge-fill me-2"></i>Integrante del Equipo y Lic. en Recursos Humanos
+                        </p>
+                        
+                        <!-- 
+                        SOLUCIÓN: Cambiamos <blockquote> por un <div> con un párrafo normal.
+                        Le agregamos un margen superior (mt-4) y un estilo limpio para que 
+                        mantenga la misma alineación que las frases de Bruno y Pablo, pero sin comillas.
+                        -->
+                        <div class="mt-4 pt-1">
+                            <p class="text-muted mb-0 lh-base" style="font-size: 1.02rem;">
+                                Brinda asesoramiento en gestión de personas, administración laboral y desarrollo organizacional, contribuyendo al crecimiento y fortalecimiento de empresas y equipos de trabajo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
     </section>
