@@ -2,6 +2,14 @@
    ESTILOS EXCLUSIVOS PARA LA PORTADA (INDEX.HTML)
    ========================================================================== */
 
+/* Centrado vertical y aire general en pantallas de notebook */
+.hero-section {
+    padding: 60px 0;
+    min-height: calc(100vh - 90px); /* Ocupa el alto disponible descontando la barra de navegación */
+    display: flex;
+    align-items: center;
+}
+
 /* Título de Impacto Comercial */
 .hero-titulo-principal {
     color: var(--color-primario-azul);
@@ -12,7 +20,7 @@
 }
 
 .texto-resaltado {
-    color: #2a4b8c; /* Un azul sutilmente más eléctrico para dar contraste */
+    color: #2a4b8c; /* Azul con ligero contraste para destacar la propuesta de valor */
     position: relative;
     display: inline-block;
 }
@@ -41,7 +49,7 @@
     line-height: 1.65;
 }
 
-/* ✨ NUEVO ENMARCADO PREMIUM PARA LA FOTO */
+/* ✨ ENMARCADO PREMIUM Y FLOTANTE PARA LA FOTO */
 .hero-imagen-marco {
     background: #ffffff;
     padding: 12px;
@@ -49,6 +57,10 @@
     border: 1px solid rgba(25, 50, 100, 0.08);
     box-shadow: 0 20px 50px rgba(25, 50, 100, 0.1);
     transition: all 0.5s ease;
+    display: inline-block;
+    width: 100%;
+    max-width: 580px; /* Ancho máximo ideal para notebooks */
+    margin: 0 auto;
 }
 
 .hero-imagen-marco:hover {
@@ -56,11 +68,13 @@
     box-shadow: 0 30px 60px rgba(25, 50, 100, 0.15);
 }
 
-.hero-imagen-estudio-nueva {
+/* 🖼️ AJUSTE DE IMAGEN: Mantiene la proporción original completa sin recortar nada arriba ni abajo */
+.hero-imagen-estudio-nueva,
+.hero-imagen-estudio {
     width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 12px; /* Redondeado interno que hace juego con el marco */
+    height: auto !important; /* Mantiene la proporción natural de la fotografía */
+    display: block;
+    border-radius: 12px; /* Redondeado interno que encaja con el marco */
 }
 
 /* Botón secundario estilizado */
@@ -92,5 +106,17 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Ajuste adaptativo (Responsive) para celulares y tablets */
+@media (max-width: 991px) {
+    .hero-section {
+        padding: 40px 0;
+        min-height: auto;
+    }
+    
+    .hero-titulo-principal {
+        font-size: 2.3rem;
     }
 }
